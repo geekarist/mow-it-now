@@ -34,7 +34,7 @@
 						<configuration>
 							<mainClass>com.github.geekariste.mowitnow.Launcher</mainClass>
 							<arguments>
-	<!-- <argument>src/test/resources/inputTestFile.txt</argument> -->							</arguments>
+	<argument>src/test/resources/inputTestFile.txt</argument> 							</arguments>
 						</configuration>
 					</execution>
 				</executions>
