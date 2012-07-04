@@ -2,20 +2,20 @@ package com.github.geekariste.mowitnow;
 
 public class Lawn {
 
-	private int sizeY;
-	private int sizeX;
+	private int lastY;
+	private int lastX;
 
 	public Lawn(int x, int y) {
-		sizeX = x;
-		sizeY = y;
+		lastX = x;
+		lastY = y;
 	}
 
-	public int getSizeY() {
-		return sizeY;
+	public int getLastY() {
+		return lastY;
 	}
 
-	public int getSizeX() {
-		return sizeX;
+	public int getLastX() {
+		return lastX;
 	}
 
 }

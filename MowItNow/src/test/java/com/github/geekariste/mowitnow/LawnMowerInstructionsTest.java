@@ -19,8 +19,8 @@ public class LawnMowerInstructionsTest {
 		LawnMowerInput instructions = new LawnMowerInput(new FileReader(
 				"src/test/resources/inputTestFile.txt"));
 		Lawn lawn = instructions.getLawn();
-		Assert.assertEquals(6, lawn.getSizeX());
-		Assert.assertEquals(6, lawn.getSizeY());
+		Assert.assertEquals(5, lawn.getLastX());
+		Assert.assertEquals(5, lawn.getLastY());
 	}
 
 	@Test

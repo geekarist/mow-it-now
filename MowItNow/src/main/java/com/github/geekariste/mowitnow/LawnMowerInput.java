@@ -32,9 +32,9 @@ public class LawnMowerInput {
 	private Lawn loadLawn(BufferedReader bufReader) throws IOException {
 		String readLine = bufReader.readLine();
 		Scanner scanner = new Scanner(readLine);
-		int sizeX = scanner.nextInt();
-		int sizeY = scanner.nextInt();
-		Lawn l = new Lawn(sizeX+1, sizeY+1);
+		int lastX = scanner.nextInt();
+		int lastY = scanner.nextInt();
+		Lawn l = new Lawn(lastX, lastY);
 		return l;
 	}
 

@@ -43,13 +43,13 @@ public class Position {
 	}
 
 	private void moveForward() {
-		if (direction == Direction.N && y < lawn.getSizeY()){
+		if (direction == Direction.N && y < lawn.getLastY()){
 			y++;
 		} else if (direction == Direction.W && x > 0) {
 			x--;
 		} else if (direction == Direction.S && y > 0) {
 			y--;
-		} else if (direction == Direction.E && x < lawn.getSizeX()) {
+		} else if (direction == Direction.E && x < lawn.getLastX()) {
 			x++;
 		}
 	}
