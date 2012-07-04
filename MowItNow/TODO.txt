@@ -1,4 +1,6 @@
-Ne pas laisser la tondeuse sortir de la pelouse
-Gérer une position initiale hors de la pelouse
+* Ne pas laisser la tondeuse sortir de la pelouse
+Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son orientation.
 Améliorer couverture de tests (cobertura)
+Gérer une position initiale hors de la pelouse
 Gérer fichier malformé
+Gérer fichier inexistant

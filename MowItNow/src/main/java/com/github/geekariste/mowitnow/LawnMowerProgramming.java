@@ -12,6 +12,22 @@ public class LawnMowerProgramming {
 		this.instructions = instructions;
 	}
 
+	public Position getInitialPosition() {
+		return initialPosition;
+	}
+
+	public void setInitialPosition(Position initialPosition) {
+		this.initialPosition = initialPosition;
+	}
+
+	public List<MowerInstruction> getInstructions() {
+		return instructions;
+	}
+
+	public void setInstructions(List<MowerInstruction> instructions) {
+		this.instructions = instructions;
+	}
+	
 	@Override
 	public String toString() {
 		return "LawnMowerProgramming [instructions=" + instructions + ", initialPosition=" + initialPosition + "]";
@@ -46,22 +62,6 @@ public class LawnMowerProgramming {
 		} else if (!instructions.equals(other.instructions))
 			return false;
 		return true;
-	}
-
-	public Position getInitialPosition() {
-		return initialPosition;
-	}
-
-	public void setInitialPosition(Position initialPosition) {
-		this.initialPosition = initialPosition;
-	}
-
-	public List<MowerInstruction> getInstructions() {
-		return instructions;
-	}
-
-	public void setInstructions(List<MowerInstruction> instructions) {
-		this.instructions = instructions;
 	}
 
 }

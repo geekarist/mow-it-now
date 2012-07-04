@@ -13,7 +13,7 @@ public class LawnMowerAppTest {
 	@Test
 	public void testExecute() throws IOException, LawnMowerException {
 		// Setup
-		String[] args = new String[] { "src/test/resources/inputTestFile.txt" };
+		String[] args = new String[] { "src/test/resources/inputTestFile-nominal.txt" };
 		Lawn lawn = new Lawn(5, 5);
 		List<Position> expectedPositions = Arrays.asList(new Position(1, 3, Direction.N, lawn), new Position(5, 1,
 				Direction.E, lawn));

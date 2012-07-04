@@ -84,14 +84,17 @@ public class Position {
 
 	@Override
 	public String toString() {
-		return "Position [x=" + x + ", y=" + y + ", direction=" + direction + "]";
+		return "Position [x=" + x + ", y=" + y + ", direction=" + direction
+				+ "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((direction == null) ? 0 : direction.hashCode());
+		result = prime * result
+				+ ((direction == null) ? 0 : direction.hashCode());
+		result = prime * result + ((lawn == null) ? 0 : lawn.hashCode());
 		result = prime * result + x;
 		result = prime * result + y;
 		return result;
@@ -107,6 +110,11 @@ public class Position {
 			return false;
 		Position other = (Position) obj;
 		if (direction != other.direction)
+			return false;
+		if (lawn == null) {
+			if (other.lawn != null)
+				return false;
+		} else if (!lawn.equals(other.lawn))
 			return false;
 		if (x != other.x)
 			return false;

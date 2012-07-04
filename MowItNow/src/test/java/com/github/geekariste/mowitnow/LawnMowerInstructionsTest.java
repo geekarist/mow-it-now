@@ -17,7 +17,7 @@ public class LawnMowerInstructionsTest {
 	@Test
 	public void testLawn() throws IOException {
 		LawnMowerInput instructions = new LawnMowerInput(new FileReader(
-				"src/test/resources/inputTestFile.txt"));
+				"src/test/resources/inputTestFile-nominal.txt"));
 		Lawn lawn = instructions.getLawn();
 		Assert.assertEquals(5, lawn.getLastX());
 		Assert.assertEquals(5, lawn.getLastY());
@@ -31,12 +31,12 @@ public class LawnMowerInstructionsTest {
 		List<MowerInstruction> instructions2 = Arrays.asList(MowerInstruction.A, MowerInstruction.A,
 				MowerInstruction.D, MowerInstruction.A, MowerInstruction.A, MowerInstruction.D, MowerInstruction.A,
 				MowerInstruction.D, MowerInstruction.D, MowerInstruction.A);
-		Lawn lawn = new Lawn(6, 6);
+		Lawn lawn = new Lawn(5, 5);
 		List<LawnMowerProgramming> expected = Arrays.asList( //
 				new LawnMowerProgramming(new Position(1, 2, Direction.N, lawn), instructions1), //
 				new LawnMowerProgramming(new Position(3, 3, Direction.E, lawn), instructions2));
 
-		FileReader reader = new FileReader("src/test/resources/inputTestFile.txt");
+		FileReader reader = new FileReader("src/test/resources/inputTestFile-nominal.txt");
 		LawnMowerInput instructions = new LawnMowerInput(reader);
 		List<LawnMowerProgramming> lawnMowerProgrammingList = instructions.getProgrammingList();
 		AssertUtils.assertListMatches(expected, lawnMowerProgrammingList);

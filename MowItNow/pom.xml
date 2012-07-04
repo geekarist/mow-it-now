@@ -18,6 +18,11 @@
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
 		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.cobertura</groupId>
+			<artifactId>cobertura</artifactId>
+			<version>1.9.4.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -27,9 +32,8 @@
 				<version>1.1.1</version>
 				<configuration>
 					<mainClass>com.github.geekariste.mowitnow.Launcher</mainClass>
-					<arguments>
-						<argument>src/test/resources/inputTestFile.txt</argument>
-					</arguments>
+					<!-- <arguments> <argument>src/test/resources/inputTestFile.txt</argument> 
+						</arguments> -->
 				</configuration>
 			</plugin>
 			<plugin>
