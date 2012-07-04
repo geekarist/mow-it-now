@@ -1,0 +1,4 @@
+Ne pas laisser la tondeuse sortir de la pelouse
+Gérer une position initiale hors de la pelouse
+Améliorer couverture de tests (cobertura)
+Gérer fichier malformé
