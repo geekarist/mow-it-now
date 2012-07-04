@@ -1,39 +1,21 @@
-Launcher
-|___LawnMowerApp
-	|___LawnMower[]
-	    |___Position
-	        |___Direction
-	        |___Lawn
-      
-LawnMowerInput
-|___Lawn
-|___LawnMowerProgramming[]
-    |___Position
-    |___MowerInstruction[]
+MOW-IT-NOW
 
-Lawn : Pelouse avec des coordonnées max x et y qui correspondent à ce qui est
-lu dans le fichier.
+Simulateur de tondeuses à gazon.  L'application est développée & testée sous windows et nécéssite maven.
 
-Position : Position sur la pelouse.  Permet de représenter les coordonnées x
-et y, la direction, et de gérer les déplacements (pivoter, avancer) à l'intérieur
-de la pelouse.  
+COMPILATION
+===========
 
-LawnMower : Tondeuse.  La tondeuse connait sa position et peut exécuter une 
-liste d'instructions à partir d'une position initiale.
+mvn clean install
 
-LawnMowerException : Erreur d'exécution, par exemple une instruction inconnue.
+LANCEMENT
+=========
 
-LawnMowerProgramming : Programmation d'une tondeuse.  C'est une liste d'instructions
-à partir d'une position initiale.
+mvn exec:java
 
-LawnMowerInput : Données d'entrée.  Correspond au fichier d'entrée, permet
-de lire les paramètres de la pelouse et la programmation de chaque tondeuse.
-
-MowerInstruction : Instruction de déplacement (G, D, A).
-
-Launcher : Classe de lancement.  Prend en argument un nom de fichier d'entree 
-et affiche la position finale des tondeuses.  En l'absence d'un nom de fichier, 
-lire sur l'entree standard.
-
-LawnMowerApp : Application de gestion des tondeuses sur la pelouse.
-
+Le programme attendra les instructions sur l'entrée standard.  Exemple de données d'entrée :
+		
+5 5
+1 2 N
+GAGAGAGAA
+3 3 E
+AADAADADDA
